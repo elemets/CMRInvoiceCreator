@@ -1,0 +1,507 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="title">PDF Build Page</h1>
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="container">
+            <div class="row">
+                <legend class="border-bottom-mb-4 centered">BUILD YOUR CMR</legend> <br></br>
+                <div class="form-group col-sm-6">
+                    {{ form.sender.label(class="form-control-label")}}
+                    {{ form.sender(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group col-sm-6"> CMR INTERNATIONAL CONSIGNMENT NOTE
+                    <p></p>This carriage is subject notwithstanding any clause to the contrary, to the Convention on the Contact for the International Carriage of goods by road (CMR)</div>
+                
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6 ">
+                    {{ form.consignee.label(class="form-control-label")}}
+                    {{ form.consignee(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group col-sm-6 ">
+                    {{ form.carrier.label(class="form-control-label")}}
+                    {{ form.carrier(class="form-control form-control-lg")}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    {{ form.place_of_delivery.label(class="form-control-label")}}
+                    {{ form.place_of_delivery(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group col-sm-6">
+                    {{ form.successive_carriers.label(class="form-control-label")}}
+                    {{ form.successive_carriers(class="form-control form-control-lg")}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    {{ form.place_of_goods_take_over.label(class="form-control-label")}}
+                    {{ form.place_of_goods_take_over(class="form-control form-control-lg")}}
+                    {{ form.date_of_goods_take_over.label(class="form-control-label")}}
+                    {{ form.date_of_goods_take_over(class="form-control form-control-sm")}}
+                    {{ form.annexed_documents.label(class="form-control-label")}}
+                    {{ form.annexed_documents(class="form-control form-control-sm")}}
+                </div>
+                <div class="form-group col-lg-6 flex-grow">
+                    <label class="form-control-label" for="carriers_reservation">18. Carrier's Reservations and observations</label>
+                    <textarea class="form-control form-control-lg" id="carriers_reservation" name="carriers_reservation" style="margin-top: 0px; margin-bottom: 0px; height: 223px;"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+               
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers1.label(class="form-control-label label-text-size") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages1.label(class="form-control-label label-text-size") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing1.label(class="form-control-label label-text-size") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods1.label(class="label-text-size") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number1.label(class="form-control-label label-text-size") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight1.label(class="form-control-label label-text-size") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods1.label(class="form-control-label label-text-size") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight1(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods1(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight2(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods2(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight3(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods3(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight4(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods4(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight5(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods5(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight6(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods6(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight7(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods7(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.marks_numbers8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.number_packages8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.method_packing8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.nature_goods8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.statistical_number8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.gross_weight8(class="form-control form-control-sm") }}
+                    </div>
+                    <div class="col">
+                        {{ form.volume_goods8(class="form-control form-control-sm") }}
+                    </div>
+                </div>
+                <div class="form-row align-items-start">
+                    <div class="col">
+                        {{ form.classe.label(class="form-control-label label-text-size")}}
+                    </div>
+                    <div class="col">
+                        {{ form.number.label(class="form-control-label label-text-size")}}
+                    </div>
+                    <div class="col">
+                        {{ form.letter.label(class="form-control-label label-text-size")}}
+                    </div>
+                    <div class="col">
+                        {{form.ADR.label(class="form-control-label label-text-size")}}
+                    </div>
+                    <div class="col-4">
+                        <p class="pad-left">TOTAL</p>
+                    </div>
+                    <div class="col">
+                        {{form.total_gross_weight(class="form-control form-control-sm")}}
+                    </div>
+
+                    <div class="col">
+                        {{form.total_gross_volume(class="form-control form-control-sm")}}
+                    </div>
+
+
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col">
+                            {{form.classe(class="form-control form-control-sm")}}
+                        </div>
+                        <div class="col">
+                            {{form.number(class="form-control form-control-sm")}}
+                        </div>
+                        <div class="col">
+                            {{form.letter(class="form-control form-control-sm")}}
+                        </div>
+                        <div class="col">
+                            {{form.ADR(class="form-control form-control-sm") }}
+                        </div>
+                        <div class="col-4">
+                        </div>
+                        <div class="col">
+                        </div>
+    
+                        <div class="col">
+                        </div>
+                        </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.sender_instructions.label(class="form-control-label") }}
+                        {{ form.sender_instructions(class="form-control form-control-sm")}}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.special_agreements.label(class="form-control-label") }}
+                        {{ form.special_agreements(class="form-control form-control-sm")}}
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.directions_for_freight_payment.label(class="form-control-label") }}
+                        {{ form.directions_for_freight_payment(class="form-control form-control-sm")}}
+                        
+                        <div class="form-check">
+                            {{ form.frieghtpaidradio.label(class="form-control-label") }}
+                            {{form.frieghtpaidradio(class="")}}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            20. To be paid by:
+                        </div>
+                        <div class="col-sm">                       
+                            Sender
+                        </div>
+                        <div class="col-sm">
+                            Consignee
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Carriage charges
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_carriage_charges(class="form-control")}}
+                        </div>
+
+                        <div class="col-sm">
+                            {{ form.consignee_carriage_charges(class="form-control")}}
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Reductions
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_reductions(class="form-control")}}
+                        </div>
+
+                        <div class="col-sm">
+                            {{ form.consignee_reductions(class="form-control")}}
+                        </div>
+
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Balance
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_balance(class="form-control")}}
+                        </div>
+
+                        <div class="col-sm">
+                            {{ form.consignee_balance(class="form-control")}}
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            <span class="smaller-text">Supplement charges</span>
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_supplement_charges(class="form-control")}}
+                        </div>
+
+                        <div class="col-sm">
+                            {{ form.consignee_supplement_charges(class="form-control")}}
+                        </div>
+                        <div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Miscellaneous
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_miscellaneous(class="form-control")}}
+                        </div>
+
+                        <div class="col-sm">
+                            {{ form.consignee_miscellaneous(class="form-control")}}
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Total to be paid
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.sender_total(class="form-control")}}
+                        </div>
+                        <div class="col-sm">
+                            {{ form.consignee_total(class="form-control")}}
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="form-row align-items-start">
+                        <div class="col-sm">
+                            Currency:
+                        </div>
+                        <div class="col-sm">                       
+                            {{form.drop_down_currency_selector_sender(class="form-control")}}
+                        </div>
+                        <div class="col-sm">
+                            {{ form.drop_down_currency_selector_consignee(class="form-control")}}
+                        </div>
+
+                    </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        21. Established In / On
+                        {{form.established_in(class="form-control")}}
+                        {{form.established_on(class="form-control")}}
+                    </div>
+                    <div class="col-sm-6">
+                        {{form.cash_on_delivery.label(class="form-control-label")}}
+                        <div class="row">
+                            <div class="col-sm-8">
+                                {{form.cash_on_delivery(class="form-control")}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{form.drop_down_currency_selector_delivery(class="form-control")}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        Signature feature to be added later (sender)
+                    </div>
+                    <div class="col-sm-6">
+                        Signature feature to be added later (carrier)
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{form.tractor_license_plate.label(class="form-control-label")}}
+                        {{form.tractor_license_plate(class="form-control")}}
+
+                    </div>
+                    <div class="col-sm-6">
+                        {{form.trailer_license_plate.label(class="form-control-label")}}
+                        {{form.trailer_license_plate(class="form-control")}}
+                    </div>
+                    
+                </div>
+            </br>
+                <div>
+                {{form.submit_preview(class="btn btn-success")}}</div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
